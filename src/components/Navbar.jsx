@@ -3,17 +3,50 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <Link className="navbar-brand fw-bold" to="/">
           Sports Portal
         </Link>
-        <div className="nav-links">
-          <Link to="/events">Events</Link>
-          <Link to="/results">Results</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/uttam-awards">Uttam Awards</Link>
-          <Link to="/nominate">Nominate</Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/events">
+                Events
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/results">
+                Results
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/gallery">
+                Gallery
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/uttam-awards">
+                Uttam Awards
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link btn btn-primary text-white" to="/nominate">
+                Nominate
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
