@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/global.css";
 
 // Import all pages
 import DashboardPage from "./pages/DashboardPage";
 import NominationPage from "./pages/NominationPage";
-import EventsPage from "./pages/EventsPage";
+import EventManagementPage from "./pages/EventManagementPage";
 import ResultsPage from "./pages/ResultsPage";
 import GalleryPage from "./pages/GalleryPage";
 import UttamAwardsPage from "./pages/UttamAwardsPage";
@@ -18,15 +19,15 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="d-flex flex-column min-vh-100">
         {/* Navbar visible across all screens */}
         <Navbar />
-        <main>
+        <main className="flex-grow-1 pt-5">
           {/* Define application routes */}
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/nominate" element={<NominationPage />} />
-            <Route path="/events" element={<EventsPage />} />
+            <Route path="/events" element={<EventManagementPage />} />
             <Route path="/results" element={<ResultsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/uttam-awards" element={<UttamAwardsPage />} />
