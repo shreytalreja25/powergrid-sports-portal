@@ -41,6 +41,11 @@ const Navbar = () => {
                 Uttam Awards
               </Link>
             </li>
+            <li>
+              <Link to="/manage-nominations" className="nav-link">
+                Manage Nominations
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 className="btn btn-primary text-white"

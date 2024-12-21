@@ -11,6 +11,7 @@ import ResultsPage from "./pages/ResultsPage";
 import GalleryPage from "./pages/GalleryPage";
 import UttamAwardsPage from "./pages/UttamAwardsPage";
 import SportsPolicyPage from "./pages/SportsPolicyPage";
+import ManageNominationsPage from "./pages/ManageNominationsPage";
 
 // Import global components
 import Navbar from "./components/Navbar";
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/uttam-awards" element={<UttamAwardsPage />} />
             <Route path="/policy" element={<SportsPolicyPage />} />
+            <Route path="/manage-nominations" element={<ManageNominationsPage />} />;
           </Routes>
         </main>
         {/* Footer visible across all screens */}
