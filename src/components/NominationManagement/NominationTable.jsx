@@ -8,21 +8,6 @@ const sampleNominations = [
 ];
 
 export function NominationTable({ onSelectNomination }) {
-  const getBadgeClass = (status) => {
-    switch (status) {
-      case "Pending":
-        return "badge bg-dark";
-      case "Approved":
-        return "badge bg-success";
-      case "Declined":
-        return "badge bg-danger";
-      case "Modified":
-        return "badge bg-warning text-dark";
-      default:
-        return "badge bg-secondary";
-    }
-  };
-
   return (
     <div className="table-responsive">
       <table className="table table-bordered table-hover align-middle">
@@ -42,14 +27,15 @@ export function NominationTable({ onSelectNomination }) {
               <td>{nomination.name}</td>
               <td>{nomination.sport}</td>
               <td>
-                <span className={getBadgeClass(nomination.status)}>
-                  {nomination.status}
-                </span>
+                <span className="badge bg-secondary">{nomination.status}</span>
               </td>
               <td>
                 <button
                   className="btn btn-dark btn-sm"
-                  onClick={() => onSelectNomination(nomination)}
+                  onClick={() => {
+                    console.log("Manage button clicked for:", nomination); // Log button click
+                    onSelectNomination(nomination);
+                  }}
                 >
                   Manage
                 </button>
