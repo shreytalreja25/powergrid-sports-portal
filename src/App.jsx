@@ -12,6 +12,8 @@ import GalleryPage from "./pages/GalleryPage";
 import UttamAwardsPage from "./pages/UttamAwardsPage";
 import SportsPolicyPage from "./pages/SportsPolicyPage";
 import ManageNominationsPage from "./pages/ManageNominationsPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 // Import global components
 import Navbar from "./components/Navbar";
@@ -26,7 +28,9 @@ const App = () => {
         <main className="flex-grow-1 pt-5">
           {/* Define application routes */}
           <Routes>
-            <Route path="/" element={<DashboardPage />} />
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/nominate" element={<NominationPage />} />
             <Route path="/events" element={<EventManagementPage />} />
             <Route path="/results" element={<ResultsPage />} />
