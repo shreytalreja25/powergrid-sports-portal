@@ -1,18 +1,20 @@
 import React from "react";
 
 const LiveStream = () => {
-  const liveStreamUrl = "https://www.example.com/your-live-stream"; // Replace with your live stream URL
-
   return (
-    <div className="embed-responsive embed-responsive-16by9 bg-dark rounded shadow">
-      <iframe
-        src={liveStreamUrl}
-        title="Live Game Broadcast"
-        allowFullScreen
-        className="embed-responsive-item w-100 h-100 rounded"
-        style={{ border: "none" }}
-      ></iframe>
-    </div>
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
+      title="Live Stream"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      style={{
+        borderRadius: "8px",
+        border: "1px solid #ccc",
+      }}
+    ></iframe>
   );
 };
 
