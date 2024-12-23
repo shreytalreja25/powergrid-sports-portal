@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./LoginPage.css"; // Import the custom CSS file
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +20,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100" style={{ background: "linear-gradient(to bottom, #4e8cff, #34e89e)" }}>
+    <div className="login-page d-flex justify-content-center align-items-center">
       <div className="card p-4 shadow-lg" style={{ width: "400px" }}>
         <div className="text-center mb-4">
           <h2>Sports Portal Logo</h2>
@@ -26,7 +28,9 @@ const LoginPage = () => {
         <h4 className="text-center mb-3">Login to Sports Portal</h4>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email</label>
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -39,7 +43,9 @@ const LoginPage = () => {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
             <input
               type="password"
               id="password"
@@ -51,8 +57,16 @@ const LoginPage = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-dark w-100">Sign In</button>
+          <button type="submit" className="btn btn-dark w-100">
+            Sign In
+          </button>
         </form>
+        <div className="text-center mt-3">
+          <span>New User? </span>
+          <Link to="/register" className="text-primary">
+            Register Here
+          </Link>
+        </div>
       </div>
     </div>
   );
