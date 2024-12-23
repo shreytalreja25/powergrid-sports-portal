@@ -1,10 +1,22 @@
 import React from "react";
+import ResultsHeader from "../components/results/ResultsHeader";
+import ResultsFilter from "../components/results/ResultsFilter";
+import ResultsTable from "../components/results/ResultsTable";
+import ResultsSummary from "../components/results/ResultsSummary";
 
 const ResultsPage = () => {
   return (
-    <div>
-      <h1>Results Page</h1>
-      <p>This page will showcase results for various sports events, including uploads of photographs and videos.</p>
+    <div className="container mx-auto py-10">
+      <ResultsHeader />
+      <div className="grid gap-6 md:grid-cols-4">
+        <div className="md:col-span-1">
+          <ResultsFilter />
+        </div>
+        <div className="md:col-span-3">
+          <ResultsSummary />
+          <ResultsTable />
+        </div>
+      </div>
     </div>
   );
 };
