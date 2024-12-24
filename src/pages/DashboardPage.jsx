@@ -9,21 +9,25 @@ const DashboardPage = () => {
       title: "Women Participation",
       value: "45%",
       description: "+20.1% from last year",
+      icon: "fas fa-female",
     },
     {
       title: "Total Medals",
       value: "54",
       description: "+19 from last year",
+      icon: "fas fa-medal",
     },
     {
       title: "Regional Ranking",
       value: "2nd",
       description: "+1 position from last year",
+      icon: "fas fa-trophy",
     },
     {
       title: "Uttam Awards",
       value: "12",
       description: "+3 from last year",
+      icon: "fas fa-award",
     },
   ];
 
@@ -42,11 +46,12 @@ const DashboardPage = () => {
       >
         {/* Render Metrics Cards */}
         {metrics.map((metric, index) => (
-          <div key={index} className="col-md-3">
+          <div key={index} className="col-md-3 col-sm-6">
             <MetricsCard
               title={metric.title}
               value={metric.value}
               description={metric.description}
+              icon={metric.icon}
             />
           </div>
         ))}

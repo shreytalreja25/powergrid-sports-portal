@@ -2,7 +2,7 @@ import React from "react";
 import { FaMapMarkerAlt, FaCalendarAlt, FaClock, FaTag } from "react-icons/fa";
 import cricketImage from "../../assets/cricket.jpg";
 
-export default function EventGrid() {
+export function EventGrid() {
   const events = [
     {
       id: 1,
