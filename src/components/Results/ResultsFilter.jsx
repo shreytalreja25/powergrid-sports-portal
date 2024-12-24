@@ -10,10 +10,10 @@ const ResultsFilter = () => {
   };
 
   return (
-    <div className="bg-card p-6 rounded-lg shadow">
+    <div className="bg-card p-4 rounded-lg shadow">
       <h2 className="text-2xl font-semibold mb-4">Filter Results</h2>
-      <div className="space-y-4">
-        <div>
+      <div className="row g-3 align-items-end">
+        <div className="col-md-3">
           <label htmlFor="year" className="form-label">
             Year
           </label>
@@ -25,7 +25,7 @@ const ResultsFilter = () => {
             placeholder="Enter year"
           />
         </div>
-        <div>
+        <div className="col-md-3">
           <label htmlFor="region" className="form-label">
             Region
           </label>
@@ -43,7 +43,7 @@ const ResultsFilter = () => {
             <option value="cc">CC</option>
           </select>
         </div>
-        <div>
+        <div className="col-md-3">
           <label htmlFor="sport" className="form-label">
             Sport
           </label>
@@ -62,9 +62,11 @@ const ResultsFilter = () => {
             <option value="badminton">Badminton</option>
           </select>
         </div>
-        <button className="btn btn-primary w-100" onClick={handleFilter}>
-          Apply Filters
-        </button>
+        <div className="col-md-3">
+          <button className="btn btn-primary w-100" onClick={handleFilter}>
+            Apply Filters
+          </button>
+        </div>
       </div>
     </div>
   );

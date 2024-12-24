@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaSun, FaMoon } from "react-icons/fa"; // Import Sun and Moon icons
 import logo from "../assets/pg-logo.png"; // Import the logo image
-import './Navbar.css'
+import "./Navbar.css"; // Import custom styles
 
 const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Toggle dark mode class on the body
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
@@ -48,8 +64,8 @@ const Navbar = () => {
                 Uttam Awards
               </Link>
             </li>
-            <li>
-              <Link to="/manage-nominations" className="nav-link">
+            <li className="nav-item">
+              <Link className="nav-link" to="/manage-nominations">
                 Manage Nominations
               </Link>
             </li>
@@ -57,6 +73,24 @@ const Navbar = () => {
               <Link className="btn btn-primary text-white" to="/nominate">
                 Nominate
               </Link>
+            </li>
+            <li className="nav-item">
+              <button
+                className="btn btn-outline-dark ms-3 d-flex align-items-center"
+                onClick={toggleTheme}
+              >
+                {isDarkMode ? (
+                  <>
+                    <FaSun className="me-1" />
+                    LIGHT
+                  </>
+                ) : (
+                  <>
+                    <FaMoon className="me-1" />
+                    DARK
+                  </>
+                )}
+              </button>
             </li>
           </ul>
         </div>

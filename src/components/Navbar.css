@@ -1,49 +1,62 @@
+/* General Navbar Styling */
 .navbar {
-    background: linear-gradient(-45deg, #0081c8, #00b050);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    color: white !important;
+  background: linear-gradient(-45deg, #0081c8, #00b050);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white !important;
+}
+
+.navbar .navbar-brand span {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar .btn-outline-dark {
+  color: white;
+  border-color: white;
+}
+
+.navbar .btn-outline-dark:hover {
+  background-color: white;
+  color: #0081c8;
+  border-color: white;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .navbar .navbar-brand,
-  .navbar .nav-link {
-    color: white !important;
-    font-weight: 600;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .navbar .navbar-brand img {
-    height: 40px;
-    margin-right: 10px;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .navbar .navbar-toggler {
-    border: none;
-  }
-  
-  .navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-  
-  .navbar .btn {
-    color: white;
-    border: 1px solid white;
-  }
-  
-  .navbar .btn:hover {
-    color: #0081c8;
-    background-color: white;
-    border: 1px solid #0081c8;
-  }
-  
-  @keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background: linear-gradient(-45deg, #333333, #555555);
+}
+
+body.dark-mode .navbar .navbar-nav .nav-link {
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode .navbar .btn-outline-dark {
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+body.dark-mode .navbar .btn-outline-dark:hover {
+  background-color: #f5f5f5;
+  color: #333333;
+}
