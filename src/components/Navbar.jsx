@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/pg-logo.png"; // Import the logo image
+import './Navbar.css'
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
-        <Link className="navbar-brand fw-bold" to="/">
-          Sports Portal
+        <Link className="navbar-brand d-flex align-items-center fw-bold" to="/">
+          <img
+            src={logo}
+            alt="Sports Portal Logo"
+            style={{ height: "40px", marginRight: "10px" }}
+          />
+          <span>Sports Portal</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -47,10 +54,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="btn btn-primary text-white"
-                to="/nominate"
-              >
+              <Link className="btn btn-primary text-white" to="/nominate">
                 Nominate
               </Link>
             </li>
