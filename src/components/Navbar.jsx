@@ -29,7 +29,7 @@ const Navbar = () => {
             alt="Sports Portal Logo"
             style={{ height: "40px", marginRight: "10px" }}
           />
-          <span>Sports Portal</span>
+          {/* <span>Sports Portal</span> */}
         </Link>
         <button
           className="navbar-toggler"
