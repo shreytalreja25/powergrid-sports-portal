@@ -1,8 +1,8 @@
 import React from "react";
-import ResultsHeader from "../components/results/ResultsHeader";
-import ResultsFilter from "../components/results/ResultsFilter";
-import ResultsTable from "../components/results/ResultsTable";
-import ResultsSummary from "../components/results/ResultsSummary";
+import ResultsHeader from "../components/Results/ResultsHeader";
+import ResultsFilter from "../components/Results/ResultsFilter";
+import ResultsTable from "../components/Results/ResultsTable";
+import ResultsSummary from "../components/Results/ResultsSummary";
 
 const ResultsPage = () => {
   return (
